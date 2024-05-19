@@ -1,0 +1,364 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+@font-face {
+    font-family:Clarendon;
+    src: url(../FONT/Clarendon\ BT\ Bold.ttf);
+}
+
+@font-face {
+    font-family:Cralika;
+    src: url(../FONT/cralika-font-1707571657-0/cralika.otf);
+}
+
+@font-face {
+    font-family:Poppins;
+    src: url(../FONT/Poppins_Font_Family/Poppins\ Light\ 300.ttf);
+}
+:root{
+    --a-color: #1C353D;
+    --b-color: #BA2227;
+    --c-color: #FA7B20;
+    --d-color: #F1EE81;
+
+    --Claredon-font:'Clarendon';
+    --Cralika-font:'Cralika';
+    --Poppins-font:'Poppins';
+}
+body{
+    /* background-image: radial-gradient(#898383, #000); */
+}
+
+body > div > *{
+    color: #000;
+    padding: 1.5rem 3rem;
+    max-width: 1550px;
+    margin: auto;
+    z-index: 1;
+    position: relative;
+}
+body > div > *{
+    max-width: 1550px;
+    margin: auto;
+}
+body > div:first-child {
+    z-index: 1;
+}
+img{
+    width: 100%;
+}
+p{
+    font-family: var(--Poppins-font);
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: var(--Claredon-font);
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+hr{
+    margin: 20px auto;
+}
+.btn{
+    padding: 0.2rem 1rem;
+    font-family: var(--Poppin-font);
+    color:#fff;
+    width: fit-content;
+    border-radius: 5px;
+    display: inline-block;
+}
+.info{
+    font-family: var(--Poppins-font);
+}
+.btn{
+    background-color: var(--b-color);
+    font-family: var(--Poppins-font); 
+    letter-spacing: 2.5px;
+}
+.btn.outline{
+    background-color: transparent;
+    border: 2px solid #fff;
+}
+nav > * , .info{
+    color: #fff;
+}
+
+.logo {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    align-items:end;
+    gap: 0.5rem;
+    max-width: 250px;
+
+}
+nav, .items, .info, .info ul{
+    display: flex;
+    justify-content: space-between;
+    gap:2rem;
+    align-items: center;
+}
+nav .items a{
+    font-family: var(--Poppins-font);
+    text-transform: capitalize;
+}
+.headerr .btn{
+    color: #fff;
+    border-color: #fff;
+}
+body > div:first-child {
+    background: #000000bf;
+    background-image: url(../IMG/Pre_SILOAM/IMG_4533.jpg);
+    background-position:top;
+    background-blend-mode: saturation;
+    background-size: cover;
+    animation: zoomInOut 15s infinite alternate;
+}
+@keyframes zoomInOut {
+    0% { background-size: 100% auto; }
+    100% { background-size: 120% auto; }
+  }
+header > div{
+    color: white;
+    padding: 5%;
+    min-height: 50vh;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section{
+    margin: 5% 0;
+}
+.hero-text{
+    gap: 0.7rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    height: max-content;
+    text-align: center;
+    line-height: 1.5;
+    letter-spacing:2px;
+}
+.hero-text p{
+    font-family: var(--Poppins-font);
+}
+.hero-text h1{
+    text-transform: capitalize;
+    font-weight: bolder;
+    -webkit-text-stroke-width: medium;
+    letter-spacing: 7px;
+    stroke-width: 10px;
+    font-size: 48px;
+    font-family: var(--Poppins-font);
+}
+
+main section.one{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 2rem;
+    align-items: center;
+}
+main section.one .image img{
+    max-width: 400px;
+    min-width: 250px;
+    border-radius: 15px;
+}
+main section.one .text{
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+main section.one .text h1{
+    color: var(--c-color);
+    font-family: var(--Poppins-font);
+    font-weight: bolder;
+    -webkit-text-stroke-width: thick;
+    font-size: 32px;
+    letter-spacing: 3px;
+}
+main section.one .text p{
+    font-family: var(--Poppins-font);
+    letter-spacing: 3px;
+}
+main section.two {
+    min-height: 400px;
+    background-color: #0000009e;
+    background-image:url(../IMG/DADDIE/WhatsApp\ Image\ 2024-02-14\ at\ 02.55.22_ef711577.jpg) ;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+}
+main section.three{
+    padding: 2%;
+}
+main section.three  div:first-child{
+    align-items: center;
+    flex-direction: column;
+    margin:auto;
+    text-align: center;
+    justify-content: end;
+    gap: 0;
+}
+main section.three  h1 {
+    font-size:42px;
+    text-align: center;
+    margin: 1rem;
+    text-transform: uppercase;
+    color: var(--b-color);
+}
+main section.three {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    text-align: center;
+    gap: 2rem;
+}
+main section.three > div {
+    display: flex;
+    align-items: end;
+    gap: 2rem;
+}
+main section.three > div  div{
+    height: 500px;
+    max-width: 400px;
+    border-radius: 15px;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: end;
+    text-align: center;
+    color: #fff !important;
+
+}
+main section.three > div  div p{
+    color: #fff;
+}
+main section.three > div  > div > div h2{
+    font-family: var(--Cralika-font);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+main section.three > div  > div > div{
+    height: 100% !important;
+    padding: 2rem;
+    font-family: var(--Poppins-font);
+    background-image:linear-gradient(180deg, transparent -30%, #000 70%) !important;
+}
+main section.three > div  div:first-child{
+    background-image: url(../IMG/SERVICE/pastor_faith.jpg);
+}
+main section.three > div  div:nth-child(2){
+    background-image: url(../IMG/SERVICE/pastor_omime.jpg);
+}
+main section.three > div  div:nth-child(3){
+    background-image: url(../IMG/SERVICE/IMG_1036.JPG);
+}
+main section.three .header{
+    max-width: 750px;
+}
+.cta-btn{
+    display: flex;
+    gap: 0.5rem;
+}
+
+@media screen and (min-width:1000px) {
+    
+    header{
+        /* background: url(../IMG/p\ Barnabas.png); */
+        transition: background 2s ease-in;
+        background-repeat: no-repeat;
+        background-position: right bottom;
+        background-size: 50vh;
+    }
+    .hero-text{
+        gap: 0.7rem;
+        display: flex;
+        flex-direction: column;
+        align-items: start !important;
+        max-width: 720px;
+        height: max-content;
+        text-align: left;
+        line-height: 1.5;
+        letter-spacing:2px;
+    }
+    header > div{
+        padding: 0;
+        justify-content: left;
+    }
+    
+    section.one{
+        padding: 5%;
+    }
+} 
+
+@media screen and (max-width:1000px) {
+    nav .items{
+        display: none;
+    }
+    section.one{
+        flex-direction: column;
+    }
+}
+@media screen and (max-width:760px) {
+    nav .items{
+        display: none;
+    }
+    body > div > * {
+        padding: 5%;
+    }
+    .logo{
+        max-width: 150px;
+    }
+    .hero-text h1{
+        font-size: 34px;
+        text-align: left;
+    }
+    .hero-text p{
+        text-align: left;
+    }
+    header > div{
+        padding: 0;
+    }
+    .btn{
+        padding: 0.5rem 1.5rem;
+    }
+    .cta-btn{
+        justify-content:start;
+        width: 100%;
+    }
+    section.one{
+        flex-direction: column;
+    }
+    section.one{
+        padding: 5%;
+    }
+main section.three > div {
+    flex-direction: column;
+}
+}
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1;
+    transition: opacity 1s ease-in-out; /* Add transition for opacity */
+}
+
+.bg-video.fade-out {
+    opacity: 0; /* Set opacity to 0 for fade-out effect */
+}
