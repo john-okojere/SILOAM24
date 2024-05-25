@@ -1,0 +1,90 @@
+{% load static %}
+{% load crispy_forms_tags %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'register/style.css' %}">
+    <title>Siloam Registraton Page</title>
+</head>
+<body>
+    <div class="formbold-main-wrapper">
+  <!-- Author: FormBold Team -->
+  <!-- Learn More: https://formbold.com -->
+  <div class="formbold-form-wrapper">
+    
+    <img src="{% static 'register/logo.svg' %}" width="100%">
+    {% if messages %}
+        <ul class="list-group">
+            {% for message in messages %}
+            <li class="alert alert-{{message.tags}} list-group-item">{{message}}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+      <div class="formbold-form-title">
+        <h2 class="">Apply Now</h2>
+        <p>Open your eyes to see the light of the glorious gospel of Christ, and watch your life transform.</p>
+      </div>
+
+    <form method="post">
+      {% csrf_token %}
+     <div class="field">
+      {{form | crispy }}
+     </div>
+
+      <button class="formbold-btn" type="submit" id="submitBtn">Registration starts in <span id="countdown">
+        <span><span id="days">00</span><span class="date">D</span></span> : 
+        <span><span id="hours">00</span><span class="date">H</span></span> : 
+        <span><span id="minutes">00</span><span class="date">M</span></span> : 
+        <span><span id="seconds">00</span><span class="date">S</span></span> 
+      </span></button>
+    </form>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+      const countdownElement = document.getElementById('countdown');
+      const submitBtn = document.getElementById('submitBtn');
+      const daysElement = document.getElementById('days');
+      const hoursElement = document.getElementById('hours');
+      const minutesElement = document.getElementById('minutes');
+      const secondsElement = document.getElementById('seconds');
+  
+      // Set the date we're counting down to
+      const targetDate = new Date('2024-05-26T00:00:00').getTime();
+  
+      // Update the count down every 1 second
+      const countdownFunction = setInterval(() => {
+          // Get today's date and time
+          const now = new Date().getTime();
+  
+          // Find the distance between now and the count down date
+          const distance = targetDate - now;
+  
+          // Time calculations for days, hours, minutes and seconds
+          const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  
+          // Display the result in the respective elements
+          daysElement.textContent = days;
+          hoursElement.textContent = hours;
+          minutesElement.textContent = minutes;
+          secondsElement.textContent = seconds;
+  
+          // If the count down is finished, write some text
+          if (distance < 0) {
+          clearInterval(countdownFunction);
+          countdownElement.innerHTML = "EXPIRED";
+  
+          }
+      }, 1000);
+      });
+  
+      </script>
+  </div>
+</div>
+</body>
+</html>

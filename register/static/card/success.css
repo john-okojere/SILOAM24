@@ -1,0 +1,29 @@
+body{
+    background-color: rgba(0, 0, 0, 0.95);
+    background-image: url(IMG_9094\ 2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+.row{
+    display: flex;
+    text-align: left;
+    gap: 30px;
+    justify-content: space-between;
+    width: 100%;
+}
+footer{
+    width: 100%;
+}
+.container{
+    padding: 10px;
+}
+ .fw-social-inline{
+    display: grid;
+    grid-template-columns: 49% 49%;
+    grid-gap:10px;
+ }

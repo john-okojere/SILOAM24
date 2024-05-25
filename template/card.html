@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siloam 24 Cards</title>
+    <link rel="stylesheet" href="{% static 'card/style.css' %}">
+</head>
+<body>
+    {% for person in persons %}
+    <section class="{{person.role | lower}}">
+        <div>
+            <div class="front">
+                <div class="item">
+                    <div><img class="logo" src="{% static 'card/gold.png' %}" width="100%"></div>
+                    <div class="Slogo">
+                        <img src="{% static 'register/logo.svg' %}" width="100%"> 
+                        <div class="subline">
+                            <p>Lively Stones</p>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <small>{{person.first_name | upper }} {{person.last_name | upper}}</small>
+                        <div class="role">{{person.role}}</div>
+                        <small>layersoftruth.org/siloam2024</small>
+                    </div>
+                </div>
+                <div class="cover"></div>
+            </div>
+            <div class="back"> 
+                <div class="item">
+                    <div><img class="logo" src="{% static 'card/gold_outline.png' %}" width="100%"></div>
+                    <div><img class="code" src="/{{person.barcode}}" alt=""></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% endfor %}
+</body>
+</html>
